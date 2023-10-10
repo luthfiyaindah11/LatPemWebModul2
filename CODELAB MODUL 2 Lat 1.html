@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Penjumlahan</title>
+</head>
+<body>
+    <h1>PENJUMLAHAN BILANGAN</h1>
+    <table>
+        <tr>
+            <td>Bilangan Pertama :</td>
+            <td><input type="number" id="bilper"></td>
+            <td>Bilangan Kedua :</td>
+            <td><input type="number" id="bildu"></td>
+        </tr>
+    </table>
+    <button onclick="tambah()">Jumlahkan</button>
+    <button onclick="ulang()">Ulang</button>
+
+    <script>
+        var BilanganPertama =document.getElementById("bilper");
+        var BilanganKedua =document.getElementById("bildu");
+       
+        function tambah(){
+    
+        var Hasil = Number(BilanganPertama.value) + Number(BilanganKedua.value);
+        alert("Hasil Penjumlahan = "+ Hasil);
+        }
+
+        function ulang(){
+            document.getElementById("bilper").value = "";
+            document.getElementById("bildu").value = "";
+        }
+    
+    
+
+    </script>
+    
+    
+</body>
+</html>

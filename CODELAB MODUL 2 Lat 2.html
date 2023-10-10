@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="validasiForm"> 
+            <div class="input-section">
+                <label for="name">Nama Lengkap: </label>
+                <input type="text" id="nama"> 
+            </div>
+            <div class="input-section">
+                <label for="email">Email: </label>
+                <input type="text" id="email"> 
+            </div>
+            <div class="input-section">
+                <label for="alamat">Alamat: </label>
+                <textarea cols="21" rows="5" id="alamat"></textarea> 
+            </div>
+            <button id="submit-button">Daftar</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('validasiForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const nama = document.getElementById('nama').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const alamat = document.getElementById('alamat').value.trim();
+        
+            if (nama === '' || email === '' || alamat === '') { 
+                alert('Anda harus mengisi data dengan lengkap !');
+            } else {
+                alert('Pendaftaran berhasil!');
+                this.reset(); 
+            }
+        }); 
+    </script>
+</body>
+</html>
